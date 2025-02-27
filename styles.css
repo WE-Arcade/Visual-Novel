@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    background-color: #102C57; /* Dark blue background */
+    font-family: 'Press Start 2P', cursive; /* Pixel font */
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Top Navigation */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.hearts {
+    display: flex;
+}
+
+.heart {
+    width: 50px;
+    height: 50px;
+    margin-top: 19px;
+    margin-right: 15px;
+}
+
+.menu-button, .leaderboard-button {
+    background-color: black;
+    color: yellow;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.menu-button:hover, .leaderboard-button:hover {
+    opacity: 0.8; /* Hover effect */
+}
+
+/* Central Content Area */
+.central-content {
+    border: 5px solid white;
+    border-radius: 60px;
+    background-color: #102C57; /* Matches background */
+    padding: 20px;
+    text-align: center;
+   
+    margin-left: 70px;
+    height: 500px;
+    width: 1100px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.play-now {
+    position:relative;
+    top: 350px;
+    left:450px; 
+    background-color: white;
+    color: pink;
+    border: 2px solid gray;
+    border-radius: 8px; /* Oval shape */
+    padding: 10px 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* 3D effect */
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+}
+
+.play-now:hover {
+    background-color: #f0f0f0; /* Slight hover effect */
+}
+
+/* Right Sidebar */
+.right-sidebar {
+    position: absolute;
+    right: 180px;
+    top: 70px;
+    width: 50px;
+    height: 100%;
+    background: #102C57; /* Pink gradient */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap : 4px;
+}
+
+.chick {
+    width: 100px;
+    height: 100px;
+}
+
+/* Navigation Arrows */
+.arrow-container {
+    display: flex;
+    justify-content: left; /* Aligns arrows in the center */
+    align-items: left; /* Aligns them vertically */
+    gap: 1100px; /* Adjust space between arrows */
+    width: 100%; /* Ensures it takes full width */
+    position: relative;
+}
+
+.arrow {
+    width: 70px; /* Adjust size */
+    height: 70px; /* Maintain aspect ratio */
+}
+
+.left-arrow {
+    transform: rotate(-90deg); /* No rotation */
+}
+
+.right-arrow {
+    transform: rotate(90deg); /* Flip horizontally */
+}
