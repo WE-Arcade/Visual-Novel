@@ -1,0 +1,56 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@400;700&display=swap');
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background-color: #031C3B;
+        }
+        .red-rose {
+            font-family: 'Red Rose', cursive;
+        }
+        .press-start {
+            font-family: 'Press Start 2P', cursive;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+    <div class="text-center text-white space-y-16">
+        <div class="text-yellow-400  text-4xl mb-4">LEADER BOARD</div>
+        
+        <div class="flex justify-between px-10 text-pink-500 text-lg mb-4">
+            <div>RANK</div>
+            <div>SCORE</div>
+            <div>NAME</div>
+        </div>
+        
+        <div class="flex justify-between px-10 text-white text-lg mb-4">
+            <div>1</div>
+            <div>100</div>
+            <div>YOU</div>
+        </div>
+        
+        <div class="relative bg-blue text-white rounded-lg p-6 mt-16 inline-block shadow-lg border-4 border-yellow-500">
+            <div class="absolute -top-8 left-1/2 transform -translate-x-1/2">
+                <img 
+                    alt="A small yellow duckling in an eggshell" 
+                    class="w-12 h-12" 
+                    height="50" 
+                    src="hatched-duckling-in-white-egg.png" 
+                    width="50"/>
+            </div>
+            <div class="text-center text-lg px-6 font-bold red-rose">
+                <span class="text-green-500 press-start">WE</span> are all winners here. Quacking our way to the top!
+            </div>
+        </div>
+    </div>
+    
+    <div class="absolute top-4 right-4 text-red-500 text-2xl cursor-pointer">
+        <i class="fas fa-times"></i>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
