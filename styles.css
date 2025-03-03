@@ -80,6 +80,7 @@ p {
     font-size: 14px;
 }
 
+
 .play-now:hover {
     background-color: #f0f0f0; /* Slight hover effect */
 }
@@ -115,14 +116,40 @@ p {
 }
 
 .arrow {
-    width: 70px; /* Adjust size */
-    height: 70px; /* Maintain aspect ratio */
+    width: 70px; 
+    height: 70px;
+    cursor: pointer;
 }
 
 .left-arrow {
     transform: rotate(-90deg); /* No rotation */
+    cursor: pointer;
 }
 
 .right-arrow {
     transform: rotate(90deg); /* Flip horizontally */
+    cursor: pointer;
+}
+
+/* Vertical Progress Bar */
+.progress-bar-container {
+    position: fixed;
+    right: 80px; /* Adjust position to fit with chicks */
+    top: 50%; /* Start at middle */
+    transform: translateY(-50%);
+    width: 20px; /* Narrow width for vertical bar */
+    height: 80vh; /* Occupy most of the screen */
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end; /* Start progress bar at the bottom */
+}
+
+/* Vertical Progress */
+.progress-bar {
+    width: 100%;
+    height: 10%; /* Initial progress */
+    background: linear-gradient(to top, #ff69b4, #ff1493); /* Pink gradient */
+    transition: height 0.5s ease-in-out;
 }
