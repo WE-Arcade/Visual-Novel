@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Arcade Layout</title>
+    <link href='https://fonts.googleapis.com/css?family=Red Rose' rel='stylesheet'>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background-color: #0b1b36;
+            color: white;
+            font-family: 'Press Start 2P', cursive;
+            overflow: hidden;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            position: absolute;
+            width: 100%;
+            top: 10px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1px;
+            align-items: center;
+        }
+
+        /* Heart Icons */
+        .hearts img {
+            width: 30px;
+            margin-right: 5px;
+        }
+
+        /* Menu & Leaderboard Text */
+        .menu, .leaderboard {
+            color: #FFD700; /* Yellow */
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 
+                -2px -2px 0 #000, 
+                2px -2px 0 #000, 
+                -2px 2px 0 #000, 
+                2px 2px 0 #000;
+        }
+
+        /* Centered Text */
+        .center-text {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-family: 'Red Rose';
+        }
+
+        .center-text h1, .center-text p, .center-text h2 {
+            margin: 10px 0;
+            text-shadow: 2px 2px #000;
+        }
+
+        /* Bottom Image */
+        .bottom-image {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="hearts">
+            <img src="heart.png" alt="Heart">
+            <img src="heart.png" alt="Heart">
+            <img src="heart.png" alt="Heart">
+        </div>
+        <a href="#" style="text-decoration: none;"><div class="menu">MENU</div></a>
+        <a href="#" style="text-decoration: none;"><div class="leaderboard">LEADER BOARD</div></a>
+    </div>
+
+    <!-- Center Text -->
+    <div class="center-text">
+        <h1>Inspired by the WE mentors</h1>
+        <p>Lorem ipsum</p>
+        <a href="#"><h2>(introduction)</h2></a>
+    </div>
+
+    <!-- Bottom Image -->
+    <img src="ducks.png" alt="Pixel Art Background" class="bottom-image">
+
+</body>
+</html>
