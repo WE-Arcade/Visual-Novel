@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Press Start 2P", sans-serif;
+    background-color: #001a33;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .menu-container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px; /* Increased spacing */
+  }
+
+  .menu-title {
+    grid-column: span 2;
+    font-size: 36px; /* Increased font size */
+    margin-bottom: 60px; /* Adjusted spacing */
+    color: yellow;
+  }
+
+  .menu-item {
+    font-size: 26px; /* Increased font size */
+    margin: 20px 0; /* Adjusted spacing */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+
+  .menu-item:hover, .menu-item:focus {
+    color: #00ff00; /* Green color on hover */
+    transform: scale(1.1);
+  }
+
+  .menu-item:active {
+    transform: scale(0.95);
+  }
+
+  .menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 60px; /* Increased size */
+    color: red;
+    cursor: pointer;
+  }
+
+  .menu-close:hover {
+    color: #ff6666;
+  }
