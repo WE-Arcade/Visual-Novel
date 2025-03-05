@@ -1,11 +1,11 @@
 /* General Styles */
 body {
-    background-color: #102C57; /* Dark blue background */
-    font-family: 'Press Start 2P', cursive; /* Pixel font */
+    background-color: #102C57;
+    font-family: 'Press Start 2P', cursive;
     color: white;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent scrolling */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,8 +13,10 @@ body {
 }
 
 .container {
-    width: 1280px;
-    height: 720px;
+    width: 90vw;  /* Adjusted to be flexible */
+    max-width: 1280px;  /* Limits max width */
+    height: 90vh;  /* Flexible height */
+    max-height: 720px;  /* Ensures UI stays contained */
     position: relative;
     overflow: hidden;
 }
@@ -24,110 +26,89 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 1vh 2vw;
     position: absolute;
-    top: 10px;
+    top: 1vh;
     width: 100%;
 }
 
-.hearts {
-    display: flex;
-}
-
-.heart {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-}
-
-.menu-button, .leaderboard-button {
+.menu-button, .leaderboard-button, .home {
     background-color: black;
     color: yellow;
-    padding: 5px 15px;
+    padding: 0.5vh 2vw;
     border-radius: 5px;
     text-transform: uppercase;
     cursor: pointer;
-    font-size: 20px;
-    border: 2px solid yellow;
-}
-
-.menu-button:hover, .leaderboard-button:hover {
-    opacity: 0.8;
+    font-size: 1.5vw; /* Responsive font */
 }
 
 /* Game Content Box */
 .central-content {
-    border: 5px solid white;
-    border-radius: 40px;
+    border: 0.4vw solid white;
+    border-radius: 5vw;
     background-color: #102C57;
-    padding: 20px;
+    padding: 2vw;
     text-align: left;
     position: absolute;
-    top: 150px;
-    left: 120px;
-    width: 900px;
-    height: 400px;
+    top: 20vh;
+    left: 10vw;
+    width: 70vw; /* Responsive width */
+    height: 50vh;
 }
 
 h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 2vw;
+    margin-bottom: 1vh;
     text-transform: uppercase;
     text-align: left;
 }
 
 p {
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 1.2vw;
+    margin-bottom: 2vh;
     text-align: left;
 }
 
 .play-now {
     position: absolute;
-    bottom: 40px;
-    right: 40px;
+    bottom: 5%;
+    right: 5%;
     background-color: white;
     color: pink;
-    border: 2px solid gray;
-    border-radius: 8px;
-    padding: 10px 20px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
+    border: 0.2vw solid gray;
+    border-radius: 1vw;
+    padding: 1vh 2vw;
     font-family: 'Press Start 2P', cursive;
-    font-size: 14px;
-}
-
-.play-now:hover {
-    background-color: #f0f0f0;
+    font-size: 1vw;
 }
 
 /* Right Sidebar */
 .right-sidebar {
     position: absolute;
-    right: 60px;
-    top: 100px;
-    width: 100px;
-    height: 500px;
+    right: 5vw;
+    top: 15vh;
+    width: 8vw;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 2vh;
 }
 
 .chick {
-    width: 80px;
-    height: 80px;
+    width: 6vw;
+    height: 6vw;
 }
 
 /* Vertical Progress Bar */
 .progress-bar-container {
     position: absolute;
-    right: 20px;
-    top: 100px;
-    width: 15px;
-    height: 500px;
+    right: 2vw;
+    top: 15vh;
+    width: 1vw;
+    height: 60vh;
     background-color: #ddd;
-    border-radius: 10px;
+    border-radius: 1vw;
     overflow: hidden;
     display: flex;
     align-items: flex-end;
@@ -143,16 +124,16 @@ p {
 /* Navigation Arrows */
 .arrow-container {
     position: absolute;
-    bottom: 20px; /* Moved closer to the box */
-    left: 82px;
+    bottom: 5vh;
+    left: 10vw;
     display: flex;
     justify-content: space-between;
     width: 80%;
 }
 
 .arrow {
-    width: 50px;
-    height: 50px;
+    width: 5vw;
+    height: 5vw;
     cursor: pointer;
 }
 
