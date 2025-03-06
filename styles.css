@@ -12,6 +12,7 @@ body {
   height: 100vh;
 }
 
+
 .container {
   width: 90vw; /* Adjusted to be flexible */
   max-width: 1280px; /* Limits max width */
@@ -41,7 +42,7 @@ body {
   top: 2vh;
   width: 90%; /* Keeps navbar width controlled */
   left: 2%; /* Adds slight margin from screen edges */
-  background-color: #0b1b36; /* Dark blue background */
+  background-color: #001a33; /* Dark blue background */
 }
 
 .nav-button {
@@ -139,7 +140,7 @@ p {
   background: linear-gradient(45deg, #ff66b2, #ff1493);
   color: white;
   border: 0.3vw solid black;
-  border-radius: 2vw;
+  border-radius: 1vw;
   padding: 1.5vh 3vw;
   font-family: "Press Start 2P", cursive;
   font-size: 1.2vw;
@@ -249,7 +250,7 @@ p {
   position: absolute;
   top: calc(20vh + 55vh + 12vh); /* Position arrows just below the box */
   left: 5vw;
-  width: 73vw; /* Matches the box width */
+  width: 74vw; /* Matches the box width */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -270,8 +271,8 @@ p {
 
 .left-arrow:hover {
   transform: rotate(-90deg) scale(1.2);
-  /* filter: drop-shadow(0 0 1vw rgb(172, 53, 73)); */
 }
+
 
 .left-arrow:active {
   transform: rotate(-90deg) scale(0.9);
