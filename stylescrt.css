@@ -16,6 +16,7 @@ body {
   animation: flicker 0.08s infinite alternate;
 }
 
+
 /* Simulating Scanlines */
 body::before {
   content: "";
@@ -35,8 +36,11 @@ body::before {
   opacity: 0.3;
 }
 
+
+
+
 /* Slight RGB Text Bleed */
-h1, p, .nav-button, .play-now {
+h1, .nav-button, .play-now {
   text-shadow: 
     -2px -2px 0 red,
     2px 2px 0 blue,
@@ -79,7 +83,7 @@ body::after {
   left: 0;
   width: 100%;
   height: 10vh;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
   z-index: 999;
   pointer-events: none;
 }
@@ -117,27 +121,47 @@ body::after {
   background-color: #001a33; /* Dark blue background */
 }
 
+
 .nav-button {
   font-family: "Press Start 2P", cursive;
-  font-size: 1.6vw; /* Increased font size slightly */
+  font-size: 1.75vw;
   text-transform: uppercase;
-  color: #ffd700; /* Golden yellow text */
-  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
-    2px 2px 0 black; /* Creates the outlined effect */
+  color: #ffd700; /* Golden yellow */
+  text-shadow: 
+    0 0 5px white, 
+    0 0 10px rgba(15, 0, 0, 0), 
+    -2px -2px 0 black, 2px -2px 0 black, 
+    -2px 2px 0 black, 2px 2px 0 black; /* White glow + black pixel outline */
   cursor: pointer;
-  transition: transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out, text-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
   text-align: center;
-  white-space: nowrap; /* Prevents text from breaking into two lines */
-  padding: 0.5vh 1.5vw; /* Added padding for spacing */
+  white-space: nowrap;
+  padding: 0.5vh 1.5vw;
 }
 
+/* Slight glow effect on hover */
 .nav-button:hover {
   transform: scale(1.05);
+  text-shadow: 
+    0 0 8px white, 
+    0 0 15px rgba(255, 255, 255, 0.7), 
+    -2px -2px 0 black, 2px -2px 0 black, 
+    -2px 2px 0 black, 2px 2px 0 black;
 }
 
+/* Click effect - White inside, yellow outline */
 .nav-button:active {
   transform: scale(0.95);
+  color: white;
+  text-shadow: 
+    0 0 10px #ffd700, 
+    0 0 20px #ffcc00, 
+    -2px -2px 0 black, 2px -2px 0 black, 
+    -2px 2px 0 black, 2px 2px 0 black; /* Strong yellow outline */
 }
+
+
+
 
 /* .menu-button,
 .leaderboard-button,
@@ -168,9 +192,10 @@ body::after {
 
 
 .central-content {
-  border: 0.25vw solid #ffffff; /* Golden arcade-style border */
-  border-radius: 2vw; /* Less round */
-  background-color: #001a33;
+  border: 0.25vw solid #00ffff; /* Golden arcade-style border */
+  border-radius: 1vw; /* Less round */
+  /* background-color: #001a33; */
+  background: rgba(0, 0, 0, 0.2);
   padding: 2vw;
   text-align: left;
   position: absolute;
@@ -178,7 +203,7 @@ body::after {
   left: 5vw; /* Moved slightly left */
   width: 70vw;
   height: 57vh;
-  box-shadow: 0 0 1vw #ffffff; /* Glowing arcade effect */
+  box-shadow: 0 0 1vw #00ffff; /* Glowing arcade effect */
 }
 
 h1 {
@@ -186,6 +211,8 @@ h1 {
   margin-bottom: 1vh;
   text-transform: uppercase;
   text-align: left;
+  text-shadow: 0 0 8px #ff9900, 0 0 16px #f803dc;
+  animation: flicker 1.5s infinite alternate;
 }
 
 p {
@@ -213,15 +240,16 @@ p {
   right: 5%;
   background: linear-gradient(45deg, #ff66b2, #ff1493);
   color: white;
-  border: 0.3vw solid black;
-  border-radius: 1vw;
+  border: 0.2vw solid #ffffff;
+  border-radius: 0.5vw;
   padding: 1.5vh 3vw;
   font-family: "Press Start 2P", cursive;
   font-size: 1.2vw;
   text-transform: uppercase;
   text-shadow: 2px 2px 0 black, 4px 4px 0 #ff66b2;
-  box-shadow: 0 0 1vw rgba(255, 20, 147, 0.8);
+  box-shadow: 0 0 1.5vw rgba(255, 20, 147, 0.8);
   transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+  animation: flicker 1.5s infinite alternate;
   cursor: pointer;
 }
 
@@ -291,7 +319,7 @@ p {
 .progress-bar {
   width: 100%;
   height: 0%; /* Start from empty */
-  background: linear-gradient(to top, #00ff00, #008000); /* Green gradient */
+  background: linear-gradient(to bottom, #00ff00, #04ad04); /* Green gradient */
   /* transition: height 0.5s ease-in-out; */
 }
 

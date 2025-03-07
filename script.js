@@ -116,7 +116,7 @@ function goToPrevPage() {
 
 function navigateTo(page) {
   console.log("Navigating to:", page); // Debugging log
-  window.location.href = `/${page}.html`; // Ensure correct navigation
+  window.location.href = `${page}.html`; // Ensure correct navigation
 }
 
 // Ensure progress bar updates when the page loads

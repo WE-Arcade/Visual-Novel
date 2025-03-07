@@ -9,47 +9,49 @@ body {
     align-items: center;
     height: 100vh;
     overflow: hidden;
-  }
+}
 
-  .menu-container {
+.menu-container {
     text-align: center;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px; /* Increased spacing */
-  }
+    grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr);
+    gap: 40px; /* Reduced spacing */
+    padding: 40px; /* Added padding to bring content inward */
+    max-width: 80vw; /* Limit width */
+}
 
-  .menu-title {
+.menu-title {
     grid-column: span 2;
-    font-size: 33px; /* Increased font size */
-    margin-bottom: 60px; /* Adjusted spacing */
+    font-size: 33px;
+    margin-bottom: 40px;
     color: yellow;
-  }
+}
 
-  .menu-item {
-    font-size: 26px; /* Increased font size */
-    margin: 20px 0; /* Adjusted spacing */
+.menu-item {
+    font-size: 26px;
+    margin: 15px 0;
     cursor: pointer;
     transition: color 0.3s ease, transform 0.2s ease;
-  }
+}
 
-  .menu-item:hover, .menu-item:focus {
-    color: #00ff00; /* Green color on hover */
+.menu-item:hover, .menu-item:focus {
+    color: #00ff00;
     transform: scale(1.1);
-  }
+}
 
-  .menu-item:active {
+.menu-item:active {
     transform: scale(0.95);
-  }
+}
 
-  .menu-close {
+.menu-close {
     position: absolute;
     top: 20px;
     right: 20px;
-    font-size: 60px; /* Increased size */
+    font-size: 50px; /* Slightly reduced size */
     color: red;
     cursor: pointer;
-  }
+}
 
-  .menu-close:hover {
+.menu-close:hover {
     color: #ff6666;
-  }
+}
