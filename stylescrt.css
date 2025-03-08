@@ -1,7 +1,7 @@
 /* General Styles */
 /* CRT Effect */
 body {
-  background-color: #001a33;
+  background-color: #051650;
   font-family: "Press Start 2P", cursive;
   color: white;
   margin: 0;
@@ -98,16 +98,7 @@ body::after {
   overflow: hidden;
 }
 
-/* Top Navigation */
-/* .top-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1vh 2vw;
-  position: absolute;
-  top: 1vh;
-  width: 100%;
-} */
+
 
 .top-nav {
   display: flex;
@@ -118,7 +109,7 @@ body::after {
   top: 2vh;
   width: 90%; /* Keeps navbar width controlled */
   left: 2%; /* Adds slight margin from screen edges */
-  background-color: #001a33; /* Dark blue background */
+  background-color: #051650; /* Dark blue background */
 }
 
 
@@ -247,7 +238,7 @@ p {
   font-size: 1.2vw;
   text-transform: uppercase;
   text-shadow: 2px 2px 0 black, 4px 4px 0 #ff66b2;
-  box-shadow: 0 0 1.5vw rgba(255, 20, 147, 0.8);
+  box-shadow: 0 0 3vw rgba(255, 20, 147, 0.8);
   transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
   animation: flicker 1.5s infinite alternate;
   cursor: pointer;
@@ -255,12 +246,12 @@ p {
 
 .play-now:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 1.5vw rgba(255, 20, 147, 1);
+  box-shadow: 0 0 3vw rgba(255, 20, 147, 1);
 }
 
 .play-now:active {
   transform: scale(0.95);
-  box-shadow: 0 0 0.5vw rgba(255, 20, 147, 0.8);
+  box-shadow: 0 0 2vw rgba(255, 20, 147, 0.8);
 }
 
 /* Right Sidebar */

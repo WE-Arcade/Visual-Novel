@@ -1,100 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Retro Arcade Layout</title>
-    <link href='https://fonts.googleapis.com/css?family=Red Rose' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css?family=Red Rose"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            background-color: #0b1b36;
-            color: white;
-            font-family: 'Press Start 2P', cursive;
-            overflow: hidden;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-color: #051650;
+        color: white;
+        font-family: "Press Start 2P", cursive;
+        overflow: hidden;
+      }
 
-        /* Top Bar */
-        .top-bar {
-            position: absolute;
-            width: 100%;
-            top: 10px;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 1px;
-            align-items: center;
-        }
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background: repeating-linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.2) 1%,
+          rgba(0, 0, 0, 0) 2%
+        );
+        z-index: 1000;
+        opacity: 0.3;
+      }
 
-        /* Heart Icons */
-        .hearts img {
-            width: 40px;
-            margin-right: 5px;
-        }
+      .top-nav {
+        display: flex;
+        justify-content: space-around; /* Spaces items evenly while keeping margins */
+        align-items: center;
+        padding: 1vh 3vw; /* Adjusted padding for better side margins */
+        position: absolute;
+        top: 2vh;
+        width: 90%; /* Keeps navbar width controlled */
+        left: 2%; /* Adds slight margin from screen edges */
+        background-color: #051650; /* Dark blue background */
+      }
 
-        /* Menu & Leaderboard Text */
-        .menu, .leaderboard {
-            color: #FFD700; /* Yellow */
-            font-size: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 
-                -2px -2px 0 #000, 
-                2px -2px 0 #000, 
-                -2px 2px 0 #000, 
-                2px 2px 0 #000;
-        }
+      .nav-button {
+        font-family: "Press Start 2P", cursive;
+        font-size: 1.75vw;
+        text-transform: uppercase;
+        color: #ffd700; /* Golden yellow */
+        text-shadow: 0 0 5px white, 0 0 10px rgba(15, 0, 0, 0),
+          -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black; /* White glow + black pixel outline */
+        cursor: pointer;
+        transition: transform 0.1s ease-in-out, text-shadow 0.2s ease-in-out,
+          color 0.2s ease-in-out;
+        text-align: center;
+        white-space: nowrap;
+        padding: 0.5vh 1.5vw;
+      }
 
-        /* Centered Text */
-        .center-text {
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            font-family: 'Red Rose';
-            font-size: 120%;
-        }
+      /* Slight glow effect on hover */
+      .nav-button:hover {
+        transform: scale(1.05);
+        text-shadow: 0 0 8px white, 0 0 15px rgba(255, 255, 255, 0.7),
+          -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+      }
 
-        .center-text h1, .center-text p, .center-text h2 {
-            margin: 10px 0;
-            text-shadow: 2px 2px #000;
-        }
+      /* Click effect - White inside, yellow outline */
+      .nav-button:active {
+        transform: scale(0.95);
+        color: white;
+        text-shadow: 0 0 10px #ffd700, 0 0 20px #ffcc00, -2px -2px 0 black,
+          2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black; /* Strong yellow outline */
+      }
 
-        /* Bottom Image */
-        .bottom-image {
-            width: 100%;
-            height: 80%;
-        }
+      /* Centered Text */
+      .center-text {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: "Red Rose";
+        font-size: 120%;
+      }
+
+      p {
+        font-size: 1.2vw;
+        margin-bottom: 2vh;
+        text-align: center;
+        text-shadow: 2px 2px #000;
+      }
+
+      /* Bottom Image */
+      .bottom-image {
+        width: 100%;
+        height: 80%;
+      }
+
+      .arrow-container {
+        position: absolute;
+        top: calc(40vh); /* Position arrows just below the box */
+        left: 47.5vw;
+        width: 30vw; /* Matches the box width */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      /* Base Arrow Styling */
+      .arrow {
+        width: 5vw;
+        height: 5vw;
+        cursor: pointer;
+        transition: transform 0.2s ease, filter 0.2s ease;
+      }
+
+      /* Right Arrow */
+      .right-arrow {
+        transform: rotate(90deg);
+      }
+
+      .right-arrow:hover {
+        transform: rotate(90deg) scale(1.2);
+        /* filter: drop-shadow(0 0 1vw rgb(172, 53, 73)); */
+      }
+
+      .right-arrow:active {
+        transform: rotate(90deg) scale(0.9);
+      }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="hearts">
-            <img src="heart.png" alt="Heart">
-            <img src="heart.png" alt="Heart">
-            <img src="heart.png" alt="Heart">
-        </div>
-        <a href="menu.html" style="text-decoration: none; margin-left: 7%;"><div class="menu"> MENU</div></a>
-        <a href="leaderboard.html" style="text-decoration: none;"><div class="leaderboard">LEADER BOARD</div></a>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="top-nav">
+      <div class="nav-button" onClick="navigateTo('landing2')">HOME</div>
+      <div class="nav-button" onClick="navigateTo('menu')">MENU</div>
+      <div class="nav-button" onClick="navigateTo('leaderboard')">
+        LEADERBOARD
+      </div>
+      <div class="nav-button" onClick="navigateTo('about')">ABOUT US</div>
     </div>
 
     <!-- Center Text -->
     <div class="center-text">
-        <h1>Inspired by the WE mentors</h1>
-        <p>Lorem ipsum</p>
-        <a href="#"><h2>(introduction)</h2></a>
+      <h2 style="font-family: 'Play', sans-serif; font-size: 28px">
+        Welcome to the WE Arcade!<br />Relive the memories, the laughter,
+        and the (sometimes) challenging moments that made our WE experience so
+        special. Get ready to play!
+      </h2>
+    </div>
+
+    <div class="arrow-container">
+      <img
+        src="r.png"
+        class="arrow right-arrow"
+        onclick="window.location.href = 'Treasure-hunt.html';"
+      />
     </div>
 
     <!-- Bottom Image -->
-    <img src="ducks.png" alt="Pixel Art Background" class="bottom-image">
+    <img src="ducks.png" alt="Pixel Art Background" class="bottom-image" />
 
-</body>
+    <script>
+      function navigateTo(page) {
+        console.log("Navigating to:", page); // Debugging log
+        window.location.href = `${page}.html`; // Ensure correct navigation
+      }
+    </script>
+  </body>
 </html>
