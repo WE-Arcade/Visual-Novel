@@ -119,6 +119,15 @@ function navigateTo(page) {
   window.location.href = `${page}.html`; // Ensure correct navigation
 }
 
+function closeMenu() {
+  // If the menu was opened in a new tab or window, close it
+  if (window.history.length > 1) {
+    window.history.back();
+  } else {
+    window.close();
+  }
+}
+
 // Ensure progress bar updates when the page loads
 document.addEventListener("DOMContentLoaded", updateProgressBar);
 
