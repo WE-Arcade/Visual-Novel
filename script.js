@@ -102,7 +102,7 @@ function updateProgressBar() {
 function goToNextPage() {
   if (currentIndex < pages.length - 1) {
     localStorage.setItem("progress", currentIndex + 1); // Save progress
-    window.open(pages[currentIndex + 1], "_blank");
+    window.location.href = pages[currentIndex + 1];
   }
 }
 
@@ -110,13 +110,13 @@ function goToNextPage() {
 function goToPrevPage() {
   if (currentIndex > 0) {
     localStorage.setItem("progress", currentIndex - 1); // Save progress
-    window.open(pages[currentIndex - 1], "_blank");
+    window.location.href = pages[currentIndex - 1];
   }
 }
 
 function navigateTo(page) {
   console.log("Navigating to:", page); // Debugging log
-  window.open(`${page}.html`, "_blank"); // Ensure correct navigation
+  window.location.href = `${page}.html`; // Ensure correct navigation
 }
 
 function closeMenu() {
