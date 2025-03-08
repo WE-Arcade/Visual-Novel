@@ -54,5 +54,24 @@
 <body>
     <div class="centered-text">WE ARCADE</div>
     <div class="start-text">Press Enter to Start</div>
+
+    <script>
+        function setBackground() {
+            let hour = new Date().getHours();
+            let morningImage = 'morning.jpg';  
+            let nightImage = 'night.jpg';      
+            document.body.style.backgroundImage = hour >= 6 && hour < 18 ? `url('${morningImage}')` : `url('${nightImage}')`;
+        }
+    
+        // Listen for the "Enter" key press
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                window.location.href = "landing2.html"; // Redirect to landing2
+            }
+        });
+    
+        window.onload = setBackground;
+    </script>
+    
 </body>
 </html>
