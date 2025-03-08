@@ -1,6 +1,6 @@
 function navigateTo(page) {
     console.log("Navigating to:", page); // Debugging log
-    window.location.href = `${page}.html`; // Ensure correct navigation
+    window.location.href = `./${page}.html`; // Ensure correct navigation
 }
 
 function closeMenu() {
