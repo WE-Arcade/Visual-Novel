@@ -79,15 +79,13 @@ const pages = [
 
 // Get current page name (handles query parameters too)
 let currentPage = window.location.pathname.split("/").pop().split("?")[0];
-
 // Find current page index
 let currentIndex = pages.indexOf(currentPage);
-
 // Load progress from localStorage
-let savedIndex = parseInt(localStorage.getItem("progress"));
-if (!isNaN(savedIndex) && savedIndex > currentIndex) {
-  currentIndex = savedIndex; // Use saved progress if it's ahead
-}
+// let savedIndex = parseInt(localStorage.getItem("progress"));
+// if (!isNaN(savedIndex) && savedIndex > currentIndex) {
+//   currentIndex = savedIndex; // Use saved progress if it's ahead
+// }
 
 // Function to update the progress bar
 function updateProgressBar() {
@@ -116,7 +114,7 @@ function goToPrevPage() {
 
 function navigateTo(page) {
   console.log("Navigating to:", page); // Debugging log
-  window.location.href = `${page}.html`; // Ensure correct navigation
+  window.open(`${page}.html`, '_blank'); // Ensure correct navigation
 }
 
 function closeMenu() {
