@@ -13,29 +13,37 @@
       href="https://fonts.googleapis.com/css2?family=Play&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="stylescrt.css" />
   </head>
   <body>
-    <!-- Top Navigation -->
-    <!-- <div class="top-nav">
-        <div class="home">HOME</div>
-        <div class="menu-button">MENU</div>
-        <div class="leaderboard-button">LEADER BOARD</div>
-    </div> -->
-
+    
     <div class="top-nav">
-      <div class="nav-button" onClick="navigateTo('home')">HOME</div>
-      <div class="nav-button" onClick="navigateTo('menu')">MENU</div>
-      <div class="nav-button" onClick="navigateTo('leaderboard')">LEADERBOARD</div>
-      <div class="nav-button" onClick="navigateTo('about')">ABOUT US</div>
+      <div class="nav-button" onClick="window.location.href = 'home.html';">
+        HOME
+      </div>
+      <div class="nav-button" onClick="window.location.href = 'menu.html';">
+        MENU
+      </div>
+      <div
+        class="nav-button"
+        onClick="window.location.href = 'leaderboard.html';"
+      >
+        LEADERBOARD
+      </div>
+      <div class="nav-button" onClick="window.location.href = 'about.html';">
+        ABOUT US
+      </div>
     </div>
 
     <!-- Central Content Area -->
     <div class="central-content">
-      <h1 style="font-family: 'Press Start 2P', cursive; color: pink">ASOKAN'S GAME</h1>
+      <h1 style="font-family: 'Press Start 2P', cursive;">
+        ASOKAN'S GAME
+      </h1>
       <br />
       <p style="font-family: 'Play', sans-serif; font-size: 28px">
-        Bootcamp was intense, but it prepared us for everything that followed.<br><br>
+        Bootcamp was intense, but it prepared us for everything that
+        followed.<br /><br />
         This game captures the energy, challenges, and camaraderie of those
         early days. Get ready to push your limits!
       </p>

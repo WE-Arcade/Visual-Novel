@@ -3,40 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kunisha Biryani Run</title>
+    <title>Mini games</title>
     <!-- Include a pixel font from Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylescrt.css" />
   </head>
   <body>
-    <!-- Top Navigation -->
-    <!-- <div class="top-nav">
-        <div class="home">HOME</div>
-        <div class="menu-button">MENU</div>
-        <div class="leaderboard-button">LEADER BOARD</div>
-    </div> -->
-
     <div class="top-nav">
-      <div class="nav-button" onClick="navigateTo('home')">HOME</div>
-      <div class="nav-button" onClick="navigateTo('menu')">MENU</div>
-      <div class="nav-button" onClick="navigateTo('leaderboard')">LEADER BOARD</div>
-      <div class="nav-button" onClick="navigateTo('about')">ABOUT US</div>
+      <div class="nav-button" onClick="window.location.href = 'home.html';">
+        HOME
+      </div>
+      <div class="nav-button" onClick="window.location.href = 'menu.html';">
+        MENU
+      </div>
+      <div
+        class="nav-button"
+        onClick="window.location.href = 'leaderboard.html';"
+      >
+        LEADERBOARD
+      </div>
+      <div class="nav-button" onClick="window.location.href = 'about.html';">
+        ABOUT US
+      </div>
     </div>
 
     <!-- Central Content Area -->
     <div class="central-content">
-      <h1 style="font-family: 'Press Start 2P', cursive">
-        Anshul's game
-      </h1>
+      <h1 style="font-family: 'Press Start 2P', cursive">ARUV-ERSE</h1>
       <br />
-      <p style="font-family: 'Red Rose', cursive">Anshul showed us the magic of coding and data structures. This game is a fun and engaging way to explore the world of algorithms. Anshul's DSA World is a wild ride through algorithms and data structures.
-        Get ready to quack and code! 
-        </p>
-        <button class="play-now" onclick="window.open('https://coderunner-fcxvz4yf9-vishnu-priyas-projects-4dd3a0af.vercel.app/', '_blank')">PLAY NOW</button>
-
+      <p style="font-family: 'Play', sans-serif; font-size: 28px;">Aruvi taught us so many things, it was only fair to dedicate multiple games!<br><br> Choo choo! It's train warfare time! Sink your opponent's locomotives before they derail yours!</p>
+      <button class="play-now">PLAY BATTLESHIP</button>
+      <button class="play-now" style="right: 67%">PLAY OTHELLO</button>
     </div>
 
     <!-- Right Sidebar -->

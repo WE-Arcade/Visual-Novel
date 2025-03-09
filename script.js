@@ -70,9 +70,9 @@ const pages = [
   "WE-Smash.html",
   "Biryani-Run.html",
   "Corporate-Jargon.html",
-  "Anshuls-game.html",
+  "DSA-World.html",
   "Pacwoman.html",
-  "minigames1.html",
+  "Mini-games.html",
   "Dont-pop-the-duckie.html",
   "catalogue.html",
 ];
