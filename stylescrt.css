@@ -58,10 +58,10 @@ h1, .nav-button, .play-now {
 }
 
 /* Subtle flicker effect */
-@keyframes flicker {
+/* @keyframes flicker {
   0% { opacity: 1; }
   100% { opacity: 0.98; }
-}
+} */
 
 /* Horizontal screen glow */
 .container::before {
@@ -106,7 +106,7 @@ body::after {
   align-items: center;
   padding: 1vh 3vw; /* Adjusted padding for better side margins */
   position: absolute;
-  top: 2vh;
+  top: 3vh;
   width: 90%; /* Keeps navbar width controlled */
   left: 2%; /* Adds slight margin from screen edges */
   background-color: #051650; /* Dark blue background */
