@@ -4,11 +4,11 @@ const pages = [
   "Corporate-Jargon.html",
   "DSA-World.html",
   "Pacwoman.html",
-  "Mini-games.html",
+  "Battletrains.html",
   "Dont-pop-the-duckie.html",
   "Othello.html",
-  "Asokans-game.html",
-  "catalogue.html",
+  "Squid-game.html",
+  "Quackalogue.html",
 ];
 
 // Get current page name (handles query parameters too)
