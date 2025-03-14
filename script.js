@@ -1,6 +1,5 @@
 const pages = [
   "Treasure-hunt.html",
-  "Asokans-game.html",
   "Biryani-Run.html",
   "Corporate-Jargon.html",
   "DSA-World.html",
@@ -8,6 +7,7 @@ const pages = [
   "Mini-games.html",
   "Dont-pop-the-duckie.html",
   "Othello.html",
+  "Asokans-game.html",
   "catalogue.html",
 ];
 
