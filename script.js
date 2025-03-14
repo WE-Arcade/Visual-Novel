@@ -6,8 +6,8 @@ const pages = [
   "DSA-World.html",
   "Pacwoman.html",
   "Mini-games.html",
-  "Othello.html",
   "Dont-pop-the-duckie.html",
+  "Othello.html",
   "catalogue.html",
 ];
 
