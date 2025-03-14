@@ -1,26 +1,26 @@
 {
-    "rewrites": [
-      {
-        "source": "/:path",
-        "destination": "/:path.html"
-      }
-     ],
-    "redirects": [
-      {
-        "source": "/:path.html",
-        "destination": "/:path",
-        "permanent": true
-      }
-    ],
-    "headers": [
-      {
-        "source": "/script.js",
-        "headers": [
-          {
-            "key": "Content-Type",
-            "value": "application/javascript"
-          }
-        ]
-      }
-    ]
-  }  
+  "rewrites": [
+    {
+      "source": "/:path((?!.*\\..*).*)",
+      "destination": "/:path.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/:path.html",
+      "destination": "/:path",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/script.js",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        }
+      ]
+    }
+  ]
+} 
